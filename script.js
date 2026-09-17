@@ -26,7 +26,7 @@ window.addEventListener("scroll", function () {
 
     if (scrollPosition < 300) {
 
-        document.body.style.backgroundColor = "#f5f7fa";
+        document.body.style.backgroundColor = "#164b99";
 
     } else if (scrollPosition < 700) {
 
@@ -34,7 +34,7 @@ window.addEventListener("scroll", function () {
 
     } else if (scrollPosition < 1100) {
 
-        document.body.style.backgroundColor = "#fff4cc";
+        document.body.style.backgroundColor = "#927409";
 
     } else {
 
