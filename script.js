@@ -62,21 +62,15 @@ window.addEventListener("scroll", function () {
     window.open(whatsappURL, "_blank");
 }function searchProducts() {
 
-    let searchText = document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase();
+    let searchText = document.getElementById("searchInput").value.toLowerCase().trim();
 
     let products = document.querySelectorAll(".product");
 
     products.forEach(function(product) {
 
-        let productName = product
-            .querySelector("h3")
-            .textContent
-            .toLowerCase();
+        let productText = product.textContent.toLowerCase();
 
-        if (productName.includes(searchText)) {
+        if (productText.includes(searchText)) {
             product.style.display = "";
         } else {
             product.style.display = "none";
