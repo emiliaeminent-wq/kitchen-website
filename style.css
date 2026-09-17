@@ -13,7 +13,7 @@ body {
     background-color: #3418d6;
     color: #0fb353;
 
-    transition: background-color 1s ease;
+    transition: background-color 3s ease;
 }
 
 
@@ -247,7 +247,7 @@ section h2 {
 /* CONTACT */
 
 #contact {
-    background-color: #fff8dc;
+    background-color: #04790e;
 }
 
 #contact p {
