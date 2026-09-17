@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #222;
+    background-color: #3418d6;
+    color: #0fb353;
 
     transition: background-color 1s ease;
 }
@@ -20,7 +20,7 @@ body {
 /* HEADER */
 
 header {
-    background-color: #082b5c;
+    background-color: #b0c404;
     color: white;
     padding: 20px;
     text-align: center;
@@ -300,5 +300,5 @@ footer {
 }
 
 .map-button:hover {
-    background-color: #0d3d7d;
+    background-color: #b40973;
 }
