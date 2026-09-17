@@ -42,4 +42,22 @@ window.addEventListener("scroll", function () {
 
     }
 
-});
+});function orderOnWhatsApp(productName, price) {
+
+    let message =
+        "Hello, I want to order the " +
+        productName +
+        " for GH₵ " +
+        price +
+        ".";
+
+    let whatsappNumber = "233244247564";
+
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
