@@ -90,7 +90,6 @@ let cart = [];
 
 
 // ADD PRODUCT TO CART
-
 function addToCart(productName, price) {
 
     let existingProduct = cart.find(
@@ -113,7 +112,28 @@ function addToCart(productName, price) {
 
     updateCart();
 
+    // SHOW SUCCESS MESSAGE
+
+    let message = document.createElement("div");
+
+    message.className = "cart-message";
+
+    message.textContent =
+        "✅ " + productName + " added to cart successfully!";
+
+    document.body.appendChild(message);
+
+
+    // REMOVE MESSAGE AFTER 2.5 SECONDS
+
+    setTimeout(function() {
+
+        message.remove();
+
+    }, 2500);
+
 }
+
 
 
 // UPDATE CART DISPLAY
