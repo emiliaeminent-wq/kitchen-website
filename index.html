@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Kitchen Essentials</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
+
         <h1>Kitchen Essentials</h1>
-<marquee behaviour="scroll"direction="left"> You are highly welcome to 3 KAY KITCHENWARE
-</marquee>
+
+        <marquee behavior="scroll" direction="left">
+            You are highly welcome to 3 KAY KITCHENWARE
+        </marquee>
+
         <nav>
             <a href="#home">Home</a>
             <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
+    <!-- HOME -->
     <section id="home" class="home">
 
         <h2>Everything You Need for Your Kitchen</h2>
@@ -32,324 +40,416 @@
             Quality kitchen products for your home.
         </p>
 
-        <button onclick="showMessage()">
+        <button onclick="document.getElementById('products').scrollIntoView()">
             View Products
         </button>
-<section id="products">
-<div class="search-box">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="🔎 Search for a product..."
-        oninput="searchProducts()"
-    >
-</div>
-<section class="video-section">
 
-    <h2>See Our Kitchen Products</h2>
-
-    <video controls width="100%">
-        <source src="2026-09-17-191530513.mp4" type="video/mp4">
-        Your browser does not support video playback.
-    </video>
-
-</section>
-    <h2>Our Products</h2>
-
-    <p class="shop-intro">
-        Discover quality kitchen essentials at affordable prices.
-    </p>
-
-    <div class="products">
+    </section>
 
 
-        <!-- PRODUCT 1 -->
+    <!-- PRODUCTS SECTION -->
+    <section id="products">
 
-        
-<div class="product">
+        <!-- SEARCH -->
+        <div class="search-box">
 
-    <div class="product-image">
-           
-                <img src="images/product1.jpg" alt="Kitchen wooden bowl">
-                <span class="badge">Popular</span>
-            </div>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Search for a product..."
+                oninput="searchProducts()"
+            >
 
-            <div class="product-info">
-
-                <h3>Kitchen wooden bowl</h3>
-
-                <p>
-                    Powerful wooden bowl for smoothies, sauces and everyday cooking.
-                </p>
-
-                <div class="price">
-                    GH₵ 150.00
-                </div>
-
-                <button onclick="orderOnWhatsApp('wooden bowl ', '150')">
-    🛒 Buy Now
-</button>
-
-</div>
-            </div>
-
-<!-- PRODUCT 2 -->
-
-<div class="product">
-
-    <div class="product-image">
-        <img src="images/product2.jpg" alt="Cookware Set">
-        <span class="badge">New</span>
-    </div>
-
-    <div class="product-info">
-
-        <h3>Bamboo kitchen tools Cookware Set</h3>
-
-        <p>
-            Strong and beautiful cookware set for everyday family cooking.
-        </p>
-
-        <div class="price">
-            GH₵ 0.00 Coming soon
         </div>
 
-        <button onclick="orderOnWhatsApp('Cookware Set', '')">
-            🛒 Buy Now
-        </button>
 
-    </div>
+        <!-- VIDEO -->
+        <section class="video-section">
 
-</div>
+            <h2>See Our Kitchen Products</h2>
 
-       
+            <video controls width="100%">
+
+                <source
+                    src="2026-09-17-191530513.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support video playback.
+
+            </video>
+
+        </section>
 
 
-        <!-- PRODUCT 3 -->
+        <h2>Our Products</h2>
 
-        
+        <p class="shop-intro">
+            Discover quality kitchen essentials at affordable prices.
+        </p>
 
-            <div class="product-image">
-                <img src="images/product3.jpg.jpg" alt="wooden bowl">
 
-                <span class="badge">Hot Deal</span>
-            </div>
+        <!-- PRODUCTS GRID -->
+        <div class="products">
 
-            <div class="product-info">
 
-                <h3>wooden bowl</h3>
+            <!-- PRODUCT 1 -->
+            <div class="product">
 
-                <p>
-                     Convenient for your home and office.
-                </p>
+                <div class="product-image">
 
-                <div class="price">
-                    GH₵ 0.00 Coming soon
+                    <img
+                        src="images/product1.jpg"
+                        alt="Kitchen wooden bowl"
+                    >
+
+                    <span class="badge">Popular</span>
+
                 </div>
 
-                <button onclick="orderOnWhatsApp('wooden bowl', '')">
-    🛒 Buy Now
-</button>
 
-</div>
-            </div>
+                <div class="product-info">
 
+                    <h3>Kitchen wooden bowl</h3>
 
+                    <p>
+                        Powerful wooden bowl for smoothies, sauces and everyday cooking.
+                    </p>
 
-        <!-- PRODUCT 4 -->
+                    <div class="price">
+                        GH₵ 150.00
+                    </div>
 
-        
+                    <button onclick="orderOnWhatsApp('wooden bowl', '150')">
+                        🛒 Buy Now
+                    </button>
 
-            <div class="product-image">
-                <img src="images/product4.jpg.jpg" alt="wooden kitchen tools">
-            </div>
-
-            <div class="product-info">
-
-                <h3>wooden kitchen tools</h3>
-
-                <p>
-                    Easy-to-clean for delicious everyday meals.
-                </p>
-
-                <div class="price">
-                    GH₵ 80.00
                 </div>
 
-                <button onclick="orderOnWhatsApp('wooden kitchen tools', '80')">
-    🛒 Buy Now
-</button>
-    
-</div>
             </div>
 
 
-      <!-- PRODUCT 5 -->
+            <!-- PRODUCT 2 -->
+            <div class="product">
 
-    
+                <div class="product-image">
 
-            <div class="product-image">
-                <img src="images/product6.jpg" alt=" kitchen spoon">
+                    <img
+                        src="images/product2.jpg"
+                        alt="Cookware Set"
+                    >
 
+                    <span class="badge">New</span>
 
-    
-            </div>
-
-            <div class="product-info">
-
-                <h3>kitchen spoon</h3>
-
-                <p>
-                    Easy-to-clean for delicious everyday meals.
-                </p>
-
-                <div class="price">
-                    GH₵ 0.000 Coming soon
                 </div>
 
-                <button onclick="orderOnWhatsApp(' kitchen spoon', '')">
-    🛒 Buy Now
-</button>
 
-</div>
-            </div>  
-               
-        
-         <!-- PRODUCT 6 -->
+                <div class="product-info">
 
+                    <h3>Bamboo kitchen tools Cookware Set</h3>
 
-            <div class="product-image">
-                <img src="images/product7.jpg" alt="ceramic kitchen tools">
-            </div>
+                    <p>
+                        Strong and beautiful cookware set for everyday family cooking.
+                    </p>
 
-            <div class="product-info">
+                    <div class="price">
+                        GH₵ 0.00 Coming soon
+                    </div>
 
-                <h3>ceramic kitchen tools</h3>
+                    <button onclick="orderOnWhatsApp('Cookware Set', '')">
+                        🛒 Buy Now
+                    </button>
 
-                <p>
-                    Easy-to-clean for delicious everyday meals.
-                </p>
-
-                <div class="price">
-                    GH₵ 0.000 Coming soon
                 </div>
 
-                <button onclick="orderOnWhatsApp('ceramic kitchen tools', '')">
-    🛒 Buy Now
-</button>
-    
-</div>
-            </div>   
-
-<!-- PRODUCT 7 -->
-
-
-            <div class="product-image">
-                <img src="images/product7.jpg" alt="wooden kitchen tools">
             </div>
 
-            <div class="product-info">
 
-                <h3>wooden kitchen tools</h3>
+            <!-- PRODUCT 3 -->
+            <div class="product">
 
-                <p>
-                    Easy-to-clean for delicious everyday meals.
-                </p>
+                <div class="product-image">
 
-                <div class="price">
-                    GH₵ 0.000 Coming soon
+                    <img
+                        src="images/product3.jpg.jpg"
+                        alt="Wooden bowl"
+                    >
+
+                    <span class="badge">Hot Deal</span>
+
                 </div>
 
-                <button onclick="orderOnWhatsApp('wooden kitchen tools', '')">
-    🛒 Buy Now
-</button>
 
-</div>
-            </div>
+                <div class="product-info">
 
-    
-<!-- PRODUCT 8 -->
+                    <h3>Wooden bowl</h3>
 
-        
+                    <p>
+                        Convenient for your home and office.
+                    </p>
 
-            <div class="product-image">
-                <img src="images/product8.jpg" alt=" kitchen tools">
-            </div>
+                    <div class="price">
+                        GH₵ 0.00 Coming soon
+                    </div>
 
-            <div class="product-info">
+                    <button onclick="orderOnWhatsApp('wooden bowl', '')">
+                        🛒 Buy Now
+                    </button>
 
-                <h3> kitchen tools</h3>
-
-                <p>
-                    For delicious everyday meals.
-                </p>
-
-                <div class="price">
-                    GH₵ 10.00
                 </div>
 
-                <button onclick="orderOnWhatsApp(' kitchen tools', '10')">
-    🛒 Buy Now
-</button>
-    
-</div>
             </div>
 
 
-<!-- PRODUCT 9 -->
+            <!-- PRODUCT 4 -->
+            <div class="product">
 
-        
+                <div class="product-image">
 
-            <div class="product-image">
-                <img src="images/product9.jpg" alt=" kitchen wooden tools">
-            </div>
+                    <img
+                        src="images/product4.jpg.jpg"
+                        alt="Wooden kitchen tools"
+                    >
 
-            <div class="product-info">
-
-                <h3>Wooden kitchen tools</h3>
-
-                <p>
-                    Easy for delicious everyday meals.
-                </p>
-
-                <div class="price">
-                    GH₵ 10.00
                 </div>
 
-                <button onclick="orderOnWhatsApp(' wooden kitchen tools ', '10')">
-    🛒 Buy Now
-</button>
 
-            </div>
-        <!-- PRODUCT 10 -->
+                <div class="product-info">
 
+                    <h3>Wooden kitchen tools</h3>
 
+                    <p>
+                        Easy-to-clean for delicious everyday meals.
+                    </p>
 
-            <div class="product-image">
-                <img src="images/product10.jpg" alt="Kitchen knives">
-                <span class="badge">Popular</span>
-            </div>
+                    <div class="price">
+                        GH₵ 80.00
+                    </div>
 
-            <div class="product-info">
+                    <button onclick="orderOnWhatsApp('wooden kitchen tools', '80')">
+                        🛒 Buy Now
+                    </button>
 
-                <h3>Kitchen knives</h3>
-
-                <p>
-                    Elegant kitchen knives for smoothies, sauces and everyday cooking.
-                </p>
-
-                <div class="price">
-                    GH₵ 20.00
                 </div>
 
-                <button onclick="orderOnWhatsApp('wooden bowl ', '20')">
-    🛒 Buy Now
-</button>
-<div class="product-info">
-    
-</div>
             </div>
 
+
+            <!-- PRODUCT 5 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product6.jpg"
+                        alt="Kitchen spoon"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Kitchen spoon</h3>
+
+                    <p>
+                        Easy-to-clean for delicious everyday meals.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 0.00 Coming soon
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('kitchen spoon', '')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product7.jpg"
+                        alt="Ceramic kitchen tools"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Ceramic kitchen tools</h3>
+
+                    <p>
+                        Easy-to-clean for delicious everyday meals.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 0.00 Coming soon
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('ceramic kitchen tools', '')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product7.jpg"
+                        alt="Wooden kitchen tools"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Wooden kitchen tools</h3>
+
+                    <p>
+                        Easy-to-clean for delicious everyday meals.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 0.00 Coming soon
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('wooden kitchen tools', '')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product8.jpg"
+                        alt="Kitchen tools"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Kitchen tools</h3>
+
+                    <p>
+                        For delicious everyday meals.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 10.00
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('kitchen tools', '10')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 9 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product9.jpg"
+                        alt="Wooden kitchen tools"
+                    >
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Wooden kitchen tools</h3>
+
+                    <p>
+                        Easy for delicious everyday meals.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 10.00
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('wooden kitchen tools', '10')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 10 -->
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/product10.jpg"
+                        alt="Kitchen knives"
+                    >
+
+                    <span class="badge">Popular</span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <h3>Kitchen knives</h3>
+
+                    <p>
+                        Elegant kitchen knives for everyday cooking.
+                    </p>
+
+                    <div class="price">
+                        GH₵ 20.00
+                    </div>
+
+                    <button onclick="orderOnWhatsApp('Kitchen knives', '20')">
+                        🛒 Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- END PRODUCTS GRID -->
+
+
+    </section>
+    <!-- END PRODUCTS SECTION -->
+
+
+    <!-- ABOUT -->
     <section id="about">
 
         <h2>About Us</h2>
@@ -359,44 +459,81 @@
             for homes and families.
         </p>
 
-  </section>
+    </section>
 
 
-    <div class="contact-info">
+    <!-- CONTACT -->
+    <section id="contact">
 
-    <p>
-        📞 <a href="tel:0244247564">0244247564</a>
-    </p>
+        <h2>Contact Us</h2>
 
-    <p>
-        📞 <a href="tel:0591597960">0591597960</a>
-    </p>
 
-</div>
-<button onclick="window.location.href='tel:0244247564'">
-    📞 Call Seller
-</button>
-<p>
-    📍 <strong>Location: Nkwanta</strong>
-</p>
+        <div class="contact-info">
 
-<a
-    href="https://www.google.com/maps/search/?api=1&query=Nkwanta%2C%20Ghana"
-    target="_blank"
-    class="map-button">
-    📍 View Location on Map
-</a>
-<hr>
+            <p>
+                📞
+                <a href="tel:0244247564">
+                    0244247564
+                </a>
+            </p>
+
+
+            <p>
+                📞
+                <a href="tel:0591597960">
+                    0591597960
+                </a>
+            </p>
+
+        </div>
+
+
+        <button onclick="window.location.href='tel:0244247564'">
+            📞 Call Seller
+        </button>
+
+
+        <p>
+            📍 <strong>Location: Nkwanta</strong>
+        </p>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=Nkwanta%2C%20Ghana"
+            target="_blank"
+            class="map-button"
+        >
+            📍 View Location on Map
+        </a>
+
+
+        <hr>
+
+
+        <p style="color: chocolate;">
+            Also need a website for your business?
+            Contact Aroma Jerky
+        </p>
+
+
+        <button onclick="window.location.href='tel:0591597960'">
+            📞 Call
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p style="color:rgb(14, 204, 163);">© FREDA NAA 2026 Kitchen Essentials</p>
+
+        <p style="color: rgb(14, 204, 163);">
+            © FREDA NAA 2026 Kitchen Essentials
+        </p>
 
     </footer>
 
-<p style="color: chocolate;">Also need a website for  your business? Contact Aroma Jerky</p>
-</div>
-<button onclick="window.location.href='tel:0591597960'">
-    📞 Call 
-</button>
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
