@@ -261,3 +261,51 @@ function removeFromCart(index) {
     updateCart();
 
 }
+// ORDER CART ON WHATSAPP
+
+document.getElementById("checkoutButton").addEventListener("click", function () {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty. Please add a product first.");
+
+        return;
+
+    }
+
+    let message = "Hello, I want to order:%0A%0A";
+
+    let total = 0;
+
+    cart.forEach(function (item) {
+
+        let itemTotal = item.price * item.quantity;
+
+        total += itemTotal;
+
+        message +=
+            "🛒 " +
+            item.name +
+            " × " +
+            item.quantity +
+            " = GH₵ " +
+            itemTotal.toFixed(2) +
+            "%0A";
+
+    });
+
+    message +=
+        "%0A💰 Total: GH₵ " +
+        total.toFixed(2);
+
+    let whatsappNumber = "233244247564";
+
+    let whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+    window.open(whatsappURL, "_blank");
+
+});
