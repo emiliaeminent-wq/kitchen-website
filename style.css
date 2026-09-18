@@ -302,3 +302,28 @@ footer {
 .map-button:hover {
     background-color: #b40973;
 }
+/* SEARCH BAR */
+
+.search-box {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto 40px;
+    padding: 0 15px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+    font-size: 18px;
+    border: 2px solid #082b5c;
+    border-radius: 30px;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.search-box input:focus {
+    border-color: #ffd43b;
+    box-shadow: 0 4px 15px rgba(8, 43, 92, 0.2);
+}
