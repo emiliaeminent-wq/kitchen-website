@@ -1,3 +1,5 @@
+// BACKGROUND COLOR WHEN SCROLLING
+
 window.addEventListener("scroll", function () {
 
     let scrollPosition = window.scrollY;
@@ -20,29 +22,12 @@ window.addEventListener("scroll", function () {
 
     }
 
-});window.addEventListener("scroll", function () {
+});
 
-    let scrollPosition = window.scrollY;
 
-    if (scrollPosition < 300) {
+// WHATSAPP ORDER
 
-        document.body.style.backgroundColor = "#164b99";
-
-    } else if (scrollPosition < 700) {
-
-        document.body.style.backgroundColor = "#dff6ff";
-
-    } else if (scrollPosition < 1100) {
-
-        document.body.style.backgroundColor = "#927409";
-
-    } else {
-
-        document.body.style.backgroundColor = "#e8dff5";
-
-    }
-
-});function orderOnWhatsApp(productName, price) {
+function orderOnWhatsApp(productName, price) {
 
     let message =
         "Hello, I want to order the " +
@@ -60,17 +45,26 @@ window.addEventListener("scroll", function () {
         encodeURIComponent(message);
 
     window.open(whatsappURL, "_blank");
-}function searchProducts() {
 
-    let searchText = document.getElementById("searchInput").value.toLowerCase().trim();
+}
+function searchProducts() {
+
+    let searchText = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
 
     let products = document.querySelectorAll(".product");
 
     products.forEach(function(product) {
 
-        let productText = product.textContent.toLowerCase();
+        let productName = product
+            .querySelector("h3")
+            .textContent
+            .toLowerCase();
 
-        if (productText.includes(searchText)) {
+        if (productName.includes(searchText)) {
             product.style.display = "";
         } else {
             product.style.display = "none";
