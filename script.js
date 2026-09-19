@@ -273,7 +273,7 @@ document.getElementById("checkoutButton").addEventListener("click", function () 
 
     }
 
-    let message = "Hello, I want to order:%0A%0A";
+    let message = "Hello Freda Naa, I want to order:%0A%0A";
 
     let total = 0;
 
