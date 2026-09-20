@@ -74,8 +74,8 @@ nav a:hover {
 /* BUTTONS */
 
 button {
-    background-color: #ffd43b;
-    color: #082b5c;
+    background-color: #2629eb;
+    color: #f3f720;
     border: none;
     padding: 12px 22px;
     border-radius: 8px;
@@ -85,7 +85,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffbf00;
+    background-color: #11c96d;
 }
 
 
@@ -106,7 +106,7 @@ section h2 {
 .shop-intro {
     font-size: 18px;
     margin-bottom: 40px;
-    color: #555;
+    color: #d645a6;
 }
 
 .products {
@@ -120,13 +120,13 @@ section h2 {
 }
 
 .product {
-    background-color: white;
+    background-color: srgb(219, 138, 113);
 
     border-radius: 15px;
 
     overflow: hidden;
 
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 18px rgba(68, 102, 131, 0.12);
 
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease;
@@ -247,7 +247,7 @@ section h2 {
 /* CONTACT */
 
 #contact {
-    background-color: #04790e;
+    background-color: s#1eaf84;
 }
 
 #contact p {
@@ -258,8 +258,8 @@ section h2 {
 /* FOOTER */
 
 footer {
-    background-color: #bb0b86;
-    color: white;
+    background-color: #1ee2e9;
+    color: rgb(14, 163, 201);
     text-align: center;
     padding: 25px;
 }
