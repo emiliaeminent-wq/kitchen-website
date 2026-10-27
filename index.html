@@ -615,6 +615,143 @@
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 <script src="https://www.chatbotgen.com/v2/chatbots/kitchen-essentials-website-chatbot-e21toa0/script.js" async></script>
-</body>
+            
+            
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" style="max-width:800px;margin:40px auto;padding:20px;font-family:Arial,sans-serif;">
+  <h2 style="text-align:center;">Customer Reviews ⭐</h2>
+  <p style="text-align:center;">Share your experience with Kitchen Essentials!</p>
+
+  <form id="review-form">
+    <label for="review-name">Your name</label>
+    <input id="review-name" type="text" maxlength="80" required
+      placeholder="Enter your name"
+      style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box;">
+
+    <label for="review-rating">Your rating</label>
+    <select id="review-rating" required
+      style="display:block;width:100%;padding:12px;margin:8px 0 16px;">
+      <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+      <option value="4">⭐⭐⭐⭐ - Very good</option>
+      <option value="3">⭐⭐⭐ - Good</option>
+      <option value="2">⭐⭐ - Fair</option>
+      <option value="1">⭐ - Poor</option>
+    </select>
+
+    <label for="review-comment">Your review</label>
+    <textarea id="review-comment" maxlength="1000" required
+      placeholder="Write your review here..."
+      style="display:block;width:100%;padding:12px;margin:8px 0 16px;box-sizing:border-box;min-height:100px;"></textarea>
+
+    <button type="submit"
+      style="padding:12px 20px;background:#176b45;color:white;border:0;border-radius:6px;">
+      Submit Review
+    </button>
+    <p id="review-message" role="status"></p>
+  </form>
+
+  <h3>What our customers say</h3>
+  <div id="reviews-list">Loading reviews...</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function () {
+  const SUPABASE_URL = "";
+  const SUPABASE_KEY = "sb_publishable_Quf4jR6_ZQ86nEg-4xzJJw_2KsKqbIC";
+
+  const db = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  const form = document.getElementById("review-form");
+  const message = document.getElementById("review-message");
+  const list = document.getElementById("reviews-list");
+
+  async function loadReviews() {
+    list.textContent = "Loading reviews...";
+
+    const { data, error } = await db
+      .from("customer_reviews")
+      .select("name, rating, comment, created_at")
+      .eq("approved", true)
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      list.textContent = "Reviews could not load. Please try again later.";
+      return;
+    }
+
+    list.replaceChildren();
+
+    if (!data || data.length === 0) {
+      list.textContent = "No approved reviews yet. Be the first to share!";
+      return;
+    }
+
+    data.forEach(function (review) {
+      const card = document.createElement("article");
+      card.style.cssText =
+        "padding:15px;margin:12px 0;border:1px solid #ddd;border-radius:8px;";
+
+      const heading = document.createElement("h4");
+      heading.textContent = review.name || "Customer";
+
+      const stars = document.createElement("p");
+      const rating = Math.max(1, Math.min(5, Number(review.rating) || 5));
+      stars.textContent = "⭐".repeat(rating);
+
+      const comment = document.createElement("p");
+      comment.textContent = review.comment || "";
+
+      card.append(heading, stars, comment);
+      list.appendChild(card);
+    });
+  }
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    message.textContent = "Submitting your review...";
+
+    const name = document.getElementById("review-name").value.trim();
+    const rating = Number(document.getElementById("review-rating").value);
+    const comment = document.getElementById("review-comment").value.trim();
+
+    if (!name || !comment || rating < 1 || rating > 5) {
+      message.textContent = "Please complete all fields correctly.";
+      button.disabled = false;
+      return;
+    }
+
+    const { error } = await db.from("customer_reviews").insert([{
+      name: name,
+      rating: rating,
+      comment: comment,
+      approved: false
+    }]);
+
+    button.disabled = false;
+
+    if (error) {
+      message.textContent =
+        "Sorry, your review could not be submitted. Please try again.";
+      return;
+    }
+
+    form.reset();
+    message.textContent =
+      "Thank you! Your review has been submitted for approval.";
+    await loadReviews();
+  });
+
+  loadReviews();
+})();
+</script>
+
+            </body>
 
 </html>
